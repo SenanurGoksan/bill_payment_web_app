@@ -1,0 +1,34 @@
+# .NET / Visual Studio
+**/bin/
+**/obj/
+*.user
+*.suo
+*.cache
+*.log
+.vs/
+.vscode/
+*.dbmdl
+*.pdb
+
+# SQL Server LocalDB Files
+*.mdf
+*.ldf
+
+# Angular / Node.js
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+
+# Environment / Secret Files
+.env
+*.env
+appsettings.Development.json
+appsettings.Production.json
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
