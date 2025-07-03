@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <br>
+  <div class="container">
+    <h2>Fatura Ödeme Ekranı'na Hoşgeldiniz</h2>
+    <div class="form-group"> <br>
+    <label for="faturaNo">Fatura Numarası: </label> <br>
+    <input type="text" class="form-control" id="faturaNo" [(ngModel)]="faturaNo"/> <br>
+    <button class="btn btn-primary" (click)="getFaturaInfo()" >Fatura Bilgilerini Getir</button>
+  </div>
+  <br>
+  <div class="border border-dark  rounded p-4"  *ngIf="fatura">
+    <h3>Fatura Bilgileri:</h3>
+    <p>Ad {{ fatura.firstName }}</p>
+    <p>Tutar: {{ fatura.lastName }}</p>
+    <p>Tutar: {{ fatura.kurumAdi }}</p>
+    <p>Tutar: {{ fatura.tutar }}</p>
+    <button class="btn btn-success" (click)="faturaOde()">Faturayı Öde</button>
+  </div>
+  </div>  
+</body>
+</html> 
+ 
+
+
+

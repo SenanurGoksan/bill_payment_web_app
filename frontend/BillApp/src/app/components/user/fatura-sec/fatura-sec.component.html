@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-color:#d0d9e036 !important;
+    height: fit-content;
+
+  }
+  .outer{
+    height: 100vh;
+
+  }
+
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .options {
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 40%;
+
+  }
+  .info {
+    margin-top: 15px;
+    flex: 5;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    
+  }
+
+  .box {
+  background-color: hsla(210, 33%, 53%, 0.579);
+  border: 2px solid #ccc;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: auto 1fr; /* Birinci sütun için otomatik genişlik, ikinci sütun 1 fr (1 fr ile eşit genişlik) */
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  min-height: 100px;
+}
+
+.box i {
+  font-size: 24px; /* İkonları istediğiniz büyüklüğe ayarlayabilirsiniz */
+  margin-right: 10px; /* İkon ile metin arasına boşluk bırakmak için */
+}
+
+.box a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.box:hover a {
+  opacity: 1;
+}
+
+
+  .payment-box {
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+    height: 60px;
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+
+  .payment-box a{
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+</style>
+<title>Fatura Ödeme</title>
+</head>
+<body>
+  <div class="outer">
+  <div class="container">
+    <div class="options">
+      <div class="box">
+        <i class="bi bi-lightning"></i> ELEKTRİK FATURASI
+        <a href="#"></a>
+      </div>
+      <div class="box">
+        <i class="bi bi-droplet-half"></i> SU FATURASI
+        <a href="#"></a>
+      </div>
+      <div class="box">
+        <i class="bi bi-fire"></i> DOĞALGAZ FATURASI
+        <a href="#"></a>
+      </div>
+      <div class="box">
+        <i class="bi bi-telephone"></i> TELEFON FATURASI
+        <a href="#"></a>
+      </div>
+      <div class="box">
+        <i class="bi bi-router"></i> İNTERNET FATURASI
+        <a href="#"></a>
+      </div>
+      <div class="box">
+        <i class="bi bi-house-door"></i> AİDAT- KİRA ÖDEMELERİ
+        <a href="#"></a>
+      </div>
+      
+    </div>
+
+    <div class="cont">
+      <div class="payment-box">
+        <a routerLink="/odeme">Hemen Ödeme Yapın!</a></div>
+    <div class="info">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, erat vel sollicitudin tincidunt, velit ligula euismod tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, erat vel sollicitudin tincidunt, velit ligula euismod tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, erat vel sollicitudin tincidunt, velit ligula euismod tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, erat vel sollicitudin tincidunt, velit ligula euismod tortor.</p>
+    </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>

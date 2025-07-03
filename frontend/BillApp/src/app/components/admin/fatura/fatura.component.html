@@ -1,0 +1,62 @@
+  <!--<h2>Fatura Oluştur</h2>
+  <div class="kurumsal-info">
+    <h4>Kurumsal Bilgiler</h4>
+    <p>Kurum Adı: {{ kurumsal?.kurumAdi }}</p>
+    <p>kurum Numarası: {{ kurumsal?.kurumId }}</p>
+  </div>
+  <form [formGroup]="faturaForm" (ngSubmit)="submitForm()">
+    
+    <div class="form-group">
+      <label for="tutar">Tutar</label>
+      <input type="number" id="tutar" formControlName="tutar" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="sonOdemeTarihi">Son Ödeme Tarihi</label>
+      <input type="date" id="sonOdemeTarihi" formControlName="sonOdemeTarihi" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="userId">Kullanıcı ID</label>
+      <input type="number" id="userId" formControlName="userId" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="kurumId">Kurum ID</label>
+      <input type="number" id="kurumId" formControlName="kurumId" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Fatura Oluştur</button>
+  </form>
+
+-->
+
+<div class="container">
+  <div class="text-center mt-4">
+    <h2>Fatura Oluştur</h2>
+  </div>
+  <form [formGroup]="faturaForm" (ngSubmit)="submitForm()" class="mt-4">
+  <div class="form-group"> 
+    <label for="kurumAdi">Kurum Adını Giriniz: </label>
+    <input type="text" id="kurumAdi" formControlName="kurumAdi" class="form-control" required>
+  </div> 
+    <div class="form-group">
+      <label for="kurumId">Kurum Numarasını Giriniz: </label>
+      <input type="number" id="kurumId" formControlName="kurumId" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="userId">Müşteri Abonelik Numarasını Giriniz: </label>
+      <input type="number" id="userId" formControlName="userId" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="firstName">Müşteri Adını Giriniz: </label>
+      <input type="text" id="firstName" formControlName="firstName" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="lastName">Müşteri Soyadını Giriniz: </label>
+      <input type="text" id="lastName" formControlName="lastName" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label for="tutar">Fatura Tutarını Giriniz: </label>
+      <input type="number" id="tutar" formControlName="tutar" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Fatura Oluştur</button>
+  </form>
+</div>
+

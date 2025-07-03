@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mt-1 px-4 py-3 text-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">PayBİll</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/dashboard">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Bize Ulaşın</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Kurumsal İşlemler
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" routerLink="/fatura">Fatura Oluştur</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Kurum Bilgilerini Güncelle</a></li>
+          </ul>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/hizmet-veren-kurumlar">Ödeme İşlemleri</a>
+          </li>
+      </ul>
+    </div>
+  <div class="dropdown" *ngIf="!isUserLoggedIn">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Giriş Yap
+    </a>
+  
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" routerLink="Giris/Bireysel">Bireysel</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" routerLink="/Giris/Kurumsal">Kurumsal</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" routerLink="/Giris/Kaydol">Kayıt Ol!</a></li>
+    </ul>
+  </div>
+  <div class="btn" *ngIf="isUserLoggedIn">
+    <button class="btn btn-danger " href="#" role="button" aria-expanded="false" (click)="signOut()">
+      Çıkış Yap
+    </button>
+  
+  </div> 
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+<ng-toast></ng-toast>
